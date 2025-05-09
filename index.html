@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hostiera - WordPress Hosting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #7C4DFF;
+      color: white;
+    }
+    header {
+      background: transparent;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in forwards;
+      position: relative;
+    }
+    header img.logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 30px;
+      width: auto;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+    }
+    .cta {
+      margin-top: 20px;
+    }
+    .cta a {
+      display: inline-block;
+      background: #FF5722;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px 20px;
+      animation: slideUp 1s ease-out forwards;
+    }
+    .plan {
+      background: white;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 10px;
+      padding: 20px;
+      width: 280px;
+      max-width: 90%;
+      transform: scale(0.95);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in forwards;
+      animation-delay: 0.3s;
+      animation-fill-mode: forwards;
+      border: 0.5px solid transparent;
+    }
+    .plan:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border: 0.5px solid hotpink;
+    }
+    .plan h2 {
+      color: #7C4DFF;
+    }
+    .plan ul {
+      list-style: none;
+      padding: 0;
+    }
+    .plan ul li {
+      margin: 8px 0;
+    }
+    footer {
+      background: #5E35B1;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+    footer a {
+      color: #FFAB91;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      header img.logo {
+        position: static;
+        display: block;
+        margin: 0 auto 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.ibb.co/9k6GRt63/Trans-1-1.png" alt="Hostiera Logo" class="logo">
+    <h1>Hostiera - WordPress Hosting</h1>
+    <p>Starting at just ₹35/month. Fast, Secure, and Reliable.</p>
+    <div class="cta">
+      <a href="https://www.hostiera.com" target="_blank">Get Started</a>
+    </div>
+  </header>  <section class="plans">
+    <div class="plan">
+      <h2>Starter Plan</h2>
+      <p><strong>₹35/month</strong></p>
+      <ul>
+        <li>1 WordPress Website</li>
+        <li>Free SSL</li>
+        <li>Weekly Backup</li>
+        <li>99.9% Uptime</li>
+        <li>1 GB SSD Storage</li>
+        <li>Free Email Account</li>
+        <li>Easy WordPress Installer</li>
+        <li>24/7 Support</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h2>Pro Plan</h2>
+      <p><strong>₹65/month</strong></p>
+      <ul>
+        <li>2 Websites</li>
+        <li>Unlimited Subdomains</li>
+        <li>Unlimited Emails</li>
+        <li>Free SSL + Backup</li>
+        <li>5 GB SSD Storage</li>
+        <li>Advanced Security Tools</li>
+        <li>24/7 Priority Support</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h2>Business Plan</h2>
+      <p><strong>Coming Soon</strong></p>
+      <ul>
+        <li>Unlimited Sites</li>
+        <li>Daily Backups</li>
+        <li>Priority Support</li>
+        <li>DDoS Protection</li>
+        <li>Free CDN</li>
+        <li>Unlimited SSD Storage</li>
+        <li>Malware Scanner</li>
+        <li>Dedicated IP</li>
+        <li>Free Domain (1st Year)</li>
+      </ul>
+    </div>
+  </section>  <footer>
+    <p>
+      Follow us on 
+      <a href="https://instagram.com/Hostiera_Globle" target="_blank">Instagram</a> | 
+      <a href="https://linkedin.com/company/Hostiera-International" target="_blank">LinkedIn</a> | 
+      <a href="https://facebook.com/Hostiera" target="_blank">Facebook</a>
+    </p>
+    <p>&copy; 2025 Hostiera. All rights reserved.</p>
+  </footer>
+</body>
+</html>
