@@ -1,188 +1,293 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hostiera - WordPress Hosting</title>
+  <title>WordPress Hosting ₹49/month | Hostiera</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      background: #f9f9ff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header.hero {
       background: #7C4DFF;
-      color: white;
-    }
-    header {
-      background: transparent;
-      color: white;
-      padding: 40px 20px;
+      color: #fff;
       text-align: center;
-      animation: fadeIn 1.5s ease-in forwards;
-      position: relative;
+      padding: 80px 20px 60px;
     }
-    header img.logo {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      height: 30px;
-      width: auto;
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
+
+    .hero p {
+      font-size: 18px;
     }
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2rem;
+
+    .hero .btn-primary {
+      background: #fff;
+      color: #7C4DFF;
+      padding: 14px 30px;
+      margin-top: 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
     }
-    .cta {
+
+    .hero .btn-primary:hover {
+      background: #e0d7ff;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .features ul {
+      list-style: disc;
+      padding-left: 25px;
       margin-top: 20px;
     }
-    .cta a {
-      display: inline-block;
-      background: #FF5722;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+
+    .plans h2, .features h2, .cta h2 {
+      text-align: center;
+      margin-bottom: 30px;
     }
-    .plans {
+
+    .toggle {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .toggle button {
+      background: #e0d7ff;
+      color: #7C4DFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0 5px;
+      transition: 0.3s;
+    }
+
+    .toggle button.active {
+      background: #7C4DFF;
+      color: #fff;
+    }
+
+    .plan-grid {
       display: flex;
+      gap: 25px;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 40px 20px;
-      animation: slideUp 1s ease-out forwards;
     }
+
     .plan {
-      background: white;
-      color: #333;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin: 10px;
-      padding: 20px;
-      width: 280px;
-      max-width: 90%;
-      transform: scale(0.95);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-      opacity: 0;
-      animation: fadeIn 1.5s ease-in forwards;
-      animation-delay: 0.3s;
-      animation-fill-mode: forwards;
-      border: 0.5px solid transparent;
+      background: #fff;
+      border: 2px solid #e0d7ff;
+      padding: 25px;
+      width: 300px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(124, 77, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      position: relative;
     }
+
     .plan:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      border: 0.5px solid hotpink;
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(124, 77, 255, 0.2);
     }
-    .plan h2 {
+
+    .plan h3 {
       color: #7C4DFF;
+      font-size: 22px;
+      margin-bottom: 10px;
     }
+
+    .plan .price {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 15px 0;
+      color: #333;
+    }
+
     .plan ul {
       list-style: none;
       padding: 0;
+      margin: 15px 0;
+      text-align: left;
     }
+
     .plan ul li {
-      margin: 8px 0;
+      padding: 8px 0;
+      border-bottom: 1px dashed #ddd;
+      color: #555;
     }
-    footer {
-      background: #5E35B1;
-      color: white;
+
+    .plan ul li:last-child {
+      border-bottom: none;
+    }
+
+    .cta {
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      animation: fadeIn 1.5s ease-in forwards;
+      background: #eee;
+      padding: 50px 20px;
     }
-    footer a {
-      color: #FFAB91;
+
+    .cta .btn-primary {
+      background: #7C4DFF;
+      color: #fff;
+      padding: 14px 35px;
       text-decoration: none;
       font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
     }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+
+    .cta .btn-primary:hover {
+      background: #5b2bff;
     }
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f2f2f2;
+      font-size: 14px;
+      color: #555;
     }
-    @media(max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 26px;
       }
-      header img.logo {
-        position: static;
-        display: block;
-        margin: 0 auto 10px;
+      .hero p {
+        font-size: 16px;
+      }
+      .plan {
+        width: 100%;
+        margin-bottom: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://i.ibb.co/9k6GRt63/Trans-1-1.png" alt="Hostiera Logo" class="logo">
-    <h1>Hostiera - WordPress Hosting</h1>
-    <p>Starting at just ₹35/month. Fast, Secure, and Reliable.</p>
-    <div class="cta">
-      <a href="https://www.hostiera.com" target="_blank">Get Started</a>
+
+  <header class="hero">
+    <h1>WordPress Hosting सिर्फ ₹49/month</h1>
+    <p>Fast, Secure & Reliable – Free SSL, NVMe SSD, cPanel included.</p>
+    <a href="#plans" class="btn-primary">आज ही शुरू करें</a>
+  </header>
+
+  <section class="features">
+    <h2>Hostiera क्यों चुनें?</h2>
+    <ul>
+      <li>NVMe SSD Ultra-fast Storage</li>
+      <li>One-click WordPress Install</li>
+      <li>Free SSL Certificate</li>
+      <li>cPanel Included</li>
+      <li>Free Email Accounts</li>
+      <li>24/7 Technical Support</li>
+      <li>99.9% Uptime Guarantee</li>
+      <li>Unlimited Bandwidth</li>
+    </ul>
+  </section>
+
+  <section id="plans" class="plans">
+    <h2>WordPress Hosting Plans</h2>
+
+    <div class="toggle">
+      <button id="monthlyBtn" class="active">Monthly</button>
+      <button id="yearlyBtn">Yearly</button>
     </div>
-  </header>  <section class="plans">
-    <div class="plan">
-      <h2>Starter Plan</h2>
-      <p><strong>₹35/month</strong></p>
-      <ul>
-        <li>1 WordPress Website</li>
-        <li>Free SSL</li>
-        <li>Weekly Backup</li>
-        <li>99.9% Uptime</li>
-        <li>1 GB SSD Storage</li>
-        <li>Free Email Account</li>
-        <li>Easy WordPress Installer</li>
-        <li>24/7 Support</li>
-      </ul>
+
+    <div class="plan-grid">
+      <div class="plan">
+        <h3>Starter</h3>
+        <p class="price" data-monthly="₹49/month" data-yearly="₹499/year">₹49/month</p>
+        <ul>
+          <li>5GB NVMe SSD</li>
+          <li>1 Website</li>
+          <li>Free SSL Certificate</li>
+          <li>cPanel Access</li>
+          <li>1 Email Account</li>
+          <li>Standard Support</li>
+        </ul>
+      </div>
+
+      <div class="plan" style="border-color: #7C4DFF;">
+        <span style="position:absolute; top:-12px; right:-12px; background:#7C4DFF; color:#fff; padding:4px 10px; border-radius:12px; font-size:12px;">Popular</span>
+        <h3>Advanced</h3>
+        <p class="price" data-monthly="₹79/month" data-yearly="₹799/year">₹79/month</p>
+        <ul>
+          <li>10GB NVMe SSD</li>
+          <li>3 Websites</li>
+          <li>Free SSL + Email</li>
+          <li>cPanel Access</li>
+          <li>5 Email Accounts</li>
+          <li>Priority Support</li>
+        </ul>
+      </div>
+
+      <div class="plan">
+        <h3>Pro</h3>
+        <p class="price" data-monthly="₹189/month" data-yearly="₹1899/year">₹189/month</p>
+        <ul>
+          <li>50GB NVMe SSD</li>
+          <li>Unlimited Websites</li>
+          <li>Free SSL + CDN</li>
+          <li>cPanel Access</li>
+          <li>Unlimited Emails</li>
+          <li>Dedicated Support</li>
+        </ul>
+      </div>
     </div>
-    <div class="plan">
-      <h2>Pro Plan</h2>
-      <p><strong>₹65/month</strong></p>
-      <ul>
-        <li>2 Websites</li>
-        <li>Unlimited Subdomains</li>
-        <li>Unlimited Emails</li>
-        <li>Free SSL + Backup</li>
-        <li>5 GB SSD Storage</li>
-        <li>Advanced Security Tools</li>
-        <li>24/7 Priority Support</li>
-      </ul>
-    </div>
-    <div class="plan">
-      <h2>Business Plan</h2>
-      <p><strong>Coming Soon</strong></p>
-      <ul>
-        <li>Unlimited Sites</li>
-        <li>Daily Backups</li>
-        <li>Priority Support</li>
-        <li>DDoS Protection</li>
-        <li>Free CDN</li>
-        <li>Unlimited SSD Storage</li>
-        <li>Malware Scanner</li>
-        <li>Dedicated IP</li>
-        <li>Free Domain (1st Year)</li>
-      </ul>
-    </div>
-  </section>  <footer>
-    <p>
-      Follow us on 
-      <a href="https://instagram.com/Hostiera_Globle" target="_blank">Instagram</a> | 
-      <a href="https://linkedin.com/company/Hostiera-International" target="_blank">LinkedIn</a> | 
-      <a href="https://facebook.com/Hostiera" target="_blank">Facebook</a>
-    </p>
+  </section>
+
+  <section class="cta">
+    <h2>अपनी WordPress site आज ही live करें!</h2>
+    <a href="https://www.hostiera.com/wordpress-hosting" class="btn-primary">Start Hosting Now</a>
+  </section>
+
+  <footer>
     <p>&copy; 2025 Hostiera. All rights reserved.</p>
   </footer>
+
+  <script>
+    const monthlyBtn = document.getElementById("monthlyBtn");
+    const yearlyBtn = document.getElementById("yearlyBtn");
+    const prices = document.querySelectorAll(".price");
+
+    monthlyBtn.addEventListener("click", () => {
+      prices.forEach(p => {
+        p.textContent = p.getAttribute("data-monthly");
+      });
+      monthlyBtn.classList.add("active");
+      yearlyBtn.classList.remove("active");
+    });
+
+    yearlyBtn.addEventListener("click", () => {
+      prices.forEach(p => {
+        p.textContent = p.getAttribute("data-yearly");
+      });
+      yearlyBtn.classList.add("active");
+      monthlyBtn.classList.remove("active");
+    });
+  </script>
+
 </body>
 </html>
